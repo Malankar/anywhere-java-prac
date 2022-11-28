@@ -1,0 +1,70 @@
+What is OOPS?
+Object Oriented Programming System is the programming pattern to write programs based on the real world objects. The states and behaviors of an object are represented as the member variables and methods. In OOPS programming programs are organized around objects and data.
+
+Advantages of OPP?
+Simplicity - Objects in OOP represents a real world entity, so the complextiy is reduced and the program struture is clear.
+Code Reusability - Through inheritance the child class inherits the properites of the parent class so we dont to repeat the same code. 
+Code Flexibility - It is offered by Polymorphism in the form of method overriding and method overloading.
+Solving problems- A problem can be solved by breaking down into smaller pieces. Once the problem are broken they can be individually solved which in turn solves the main problem.
+Security-A limited amount of data is show to the user which is archieved by abstraction.
+Code Maintainance - Code is mantained in packages so it is always easy and time-saving to maintain and modify the existing codesbase.
+
+What is difference between OOP and Functional Programming?
+OOPS is based on concept of objects and methods while Functional programming is focused on the use of function calls.
+OOPS follows imperative programming model means it focuces on 'how you do thing' and function programming follows declarative programming model means 'what you want to do'.
+OOPS does not support parallel programming where programs run in parallel like async programs which are supported by functional programming.
+OOPS uses mutable data a data which can change over the time but functional programming uses immutable data.
+
+What is JDK,JRE & JVM ? 
+JDK(Java Development Kit) provides an environment to develop and run the Java program. It consists of JRE, development tools, javac compiler and doc generator 
+
+JRE (Java Runtime Environment) is an installation package that provides environment to only run the program. It consists of libraries and JVM.
+
+JVM (Java Virtual Machine) is used to load class files, checking the byte code and finally running code line by line it consists of JIT or Just In Time complier.
+
+Java Code Execution ?
+Java code is executed in 2 steps first its complied and then its interpreted.
+Java code is first complied using the javac complier which converts the java code to machine independent byte code and stores it in a .class file 
+After the code is complied it is then executed using the JVM. The classloader in JVM loads the class file which was complied then it is verified using bytecode verifier. Then bytecode is executed line by line. 
+While executing the code line by line if one method is called many times it will be interpreted again and again which would reduce the effiency. The jit compiler solves this issue by providing the machine code which was once interpreted and stored in it. It makes the execution faster. There is garbage collection at the end of the execution so as to free up the memory space that the program was using. 
+
+Data types ?
+Java is statically typed and also a strongly typed langauage because in Java each type of data is predefined as part of the programming langauage and all constants or vairables defined for a given program must be described with one of the data types.
+Java has two categories of data:
+ Primitive data
+ Object data
+Primitive data are only single values and have no special capabilities it includes int, boolean, char, byte, short, long, float, double
+Non Primitive Data or Object data contains References to a memory location it includes String, Arrays and Classes.
+
+What is Package?
+A package is a file that organizes a set of related classes and interfaces. Conceptually you can think of packages as being similar to different folders on your computer. You might keep HTML pages in one folder, images in another, and scripts or applications in yet another. Because software written in the Java programming language can be composed of hundreds or thousands of individual classes, it makes sense to keep things organized by placing related classes and interfaces into packages.
+
+Advantages of package?
+Java package is used to categorize the classes and interfaces so that they can be easily maintained.
+Java package provides access protection.
+Java package removes naming collision.
+
+Use Case of package?
+It is use to categorize classes 
+Example: Vehicle Package can have all the types of Vehicles Classes like Car, Bike etc.
+Its basically we are categoring the data. 
+
+What is interface?
+An Interface in Java programming language is defined as an abstract type used to specify the behavior of a class. An interface in Java is a blueprint of a class. A Java interface contains static constants and abstract methods.
+
+Explanation of Interface?
+An Interface is about capabilities like a Player may be an interface and any class implementing Player must be able to move(). So it specifies a set of methods that the class has to implement. The Player is an instance because you can now control how different players in the game can move but the move property is applicable to each player.
+
+Why do we use an Interface?
+It is mainly used when we want to address some common functionality but dont want to specify how it works. 
+Since java does not support multiple inheritances in the case of class, by using an interface it can achieve multiple inheritances.
+It is also used to achieve loose coupling(change in one component least affects the existence or performance of another component).
+
+Why use interface if we have Abstract Classes?
+The reason is, abstract classes may contain non-final variables, whereas variables in the interface are final, public and static.
+
+Real-World Example:
+Let’s consider the example of vehicles like bicycle, car, bike, they have common functionalities. So we make an interface and put all these common functionalities. And lets Bicycle, Bike, car etc implement all these functionalities in their own class in their own way.
+
+
+
