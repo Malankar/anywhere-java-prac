@@ -66,5 +66,22 @@ The reason is, abstract classes may contain non-final variables, whereas variabl
 Real-World Example:
 Let’s consider the example of vehicles like bicycle, car, bike, they have common functionalities. So we make an interface and put all these common functionalities. And lets Bicycle, Bike, car etc implement all these functionalities in their own class in their own way.
 
+What is a Constructor?
+A constructor in Java is similar to a method that is invoked when an object of the class is created.
+Unlike Java methods a constructor has the same name as that of the class and does not have any return type.
+
+Types of constructor?
+In Java constructors can be divided into 3 types:
+Non-parameterized Constructor - No arguments are specified Eg: Test()
+Parameterized Constructor - When arguments are specified Eg: Test(a,b)
+Default Constructor - When constructor are not specified Eg: Just create an object of a class 
+
+Why we use contrcutors?
+We use them to customize the obj according to our needs.
+
+What is constructor overloading?
+Similar to Java method overloading, we can also create two or more constructors with different parameters. This is called constructors overloading.
+
+
 
 

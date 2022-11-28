@@ -1,0 +1,20 @@
+What is a static keyword in JAVA?
+When we  want to access class methods or vairables without creating an instance of the class, we need to declare the class methods or vairables static.
+
+Example of static?
+The Math class in Java has almost all of its members static. So, we can access its members without creating instances of the Math class.
+Eg: Math.abs(-12) or Math.PI 
+Math.abs is example of static methods and Math.PI is example of static vairables.
+
+What are static Methods?
+Static methods are also called class methods. It is because a static method belongs to the class rather than the object of a class.
+Eg: Static methods in Math.abs()
+In laptop when we want to change the name of the brand we can use static methods and variables to do so.
+No. laptops manufactured will also be a static variable
+
+Static Blocks?
+In Java, static blocks are used to initialize the static variables. The static block is executed only once when the class is loaded in memory. The class is loaded if either the object of the class is requested in code or the static members are requested in code.
+
+When to use static blocks?
+Suppose you want to do some task when the class is loaded into the memory for the first time you can do it using a static block.
+Eg: When you want log out company details when a laptop class is loaded into the memory. A class is loaded when you call a static method or use a static variable or create an object of the class.
