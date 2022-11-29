@@ -29,12 +29,13 @@ After the code is complied it is then executed using the JVM. The classloader in
 While executing the code line by line if one method is called many times it will be interpreted again and again which would reduce the effiency. The jit compiler solves this issue by providing the machine code which was once interpreted and stored in it. It makes the execution faster. There is garbage collection at the end of the execution so as to free up the memory space that the program was using. 
 
 Data types ?
-Java is statically typed and also a strongly typed langauage because in Java each type of data is predefined as part of the programming langauage and all constants or vairables defined for a given program must be described with one of the data types.
+Java is statically typed this means that all vairables must be declared before they can be used. 
 Java has two categories of data:
  Primitive data
  Object data
 Primitive data are only single values and have no special capabilities it includes int, boolean, char, byte, short, long, float, double
 Non Primitive Data or Object data contains References to a memory location it includes String, Arrays and Classes.
+String is non-primitive because only class can have methods. Primitive can not.
 
 What is Package?
 A package is a file that organizes a set of related classes and interfaces. Conceptually you can think of packages as being similar to different folders on your computer. You might keep HTML pages in one folder, images in another, and scripts or applications in yet another. Because software written in the Java programming language can be composed of hundreds or thousands of individual classes, it makes sense to keep things organized by placing related classes and interfaces into packages.
