@@ -16,5 +16,5 @@ Static Blocks?
 In Java, static blocks are used to initialize the static variables. The static block is executed only once when the class is loaded in memory. The class is loaded if either the object of the class is requested in code or the static members are requested in code.
 
 When to use static blocks?
-Suppose you want to do some task when the class is loaded into the memory for the first time you can do it using a static block.
-Eg: When you want log out company details when a laptop class is loaded into the memory. A class is loaded when you call a static method or use a static variable or create an object of the class.
+if the initialization of static variables needs some additional logic apart from the assignment.
+if the initialization of static variables is error-prone and needs exception handling
