@@ -18,3 +18,6 @@ In Java, static blocks are used to initialize the static variables. The static b
 When to use static blocks?
 if the initialization of static variables needs some additional logic apart from the assignment.
 if the initialization of static variables is error-prone and needs exception handling
+
+Usecase of static block?
+Suppose a laptop subclass is there called dualcorelaptop so these laptop will have 2 cores of processor which can be specified in a static block to access it even before making a new laptop with that subclass. We will already know that any laptop made with that class will have 2 cores. 

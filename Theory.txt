@@ -20,7 +20,7 @@ JDK(Java Development Kit) provides an environment to develop and run the Java pr
 
 JRE (Java Runtime Environment) is an installation package that provides environment to only run the program. It consists of libraries and JVM.
 
-JVM (Java Virtual Machine) is used to load class files, checking the byte code and finally running code line by line it consists of JIT or Just In Time complier.
+JVM (Java Virtual Machine) is used to load class files, checking the byte code and finally run code line by line it consists of JIT or Just In Time complier.
 
 Java Code Execution ?
 Java code is executed in 2 steps first its complied and then its interpreted.
