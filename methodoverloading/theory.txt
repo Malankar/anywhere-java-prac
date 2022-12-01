@@ -1,0 +1,10 @@
+What is Method overloading?
+In Java, two or more methods may have the same name if they differ in parameters. These methods are called overloaded methods and this feature is called method overloading.
+
+Use cases of method overloading?
+Suppose there is a method to show user data with specific input 
+show() -  this shows all the users data
+show(user)- This shows specific users data
+show(dob)-This shows data of all the user who were born on the specific dob. 
+etc.
+We can also use this for constructors.

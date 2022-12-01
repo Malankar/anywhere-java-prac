@@ -77,11 +77,34 @@ Non-parameterized Constructor - No arguments are specified Eg: Test()
 Parameterized Constructor - When arguments are specified Eg: Test(a,b)
 Default Constructor - When constructor are not specified Eg: Just create an object of a class 
 
-Why we use contrcutors?
-We use them to customize the obj according to our needs.
+Why there is a need to create a constructors if we have a default constructor?
+We use them to create customized obj according to our needs.
 
 What is constructor overloading?
 Similar to Java method overloading, we can also create two or more constructors with different parameters. This is called constructors overloading.
+
+What are access modifiers?
+In Java, access modifiers are used to set the accessibility of classes, interfaces, variables, methods, constructors, data members, and the setter methods. 
+
+Why use access modifiers?
+Access modifiers are mainly used for encapsulation. It can help us to control what part of a program can access the members of a class. So that misuse of data can be prevented.
+
+Types of acess modifiers?
+Default- are visible only within packages. no keyword is used it by default.
+Private- are visible only within the class 
+Protected- are visible within the package or all subclasses of that class.
+Public- are visible everywhere.
+
+final Keyword?
+The final keyword is used to denote constants. It can be used with variables, methods, and classes.
+the final variable cannot be reinitialized with another value
+the final method cannot be overridden
+the final class cannot be extended
+
+final keyword UseCase?
+final variable - Companies name or for user contants which can be used as a reference like the uesr token.
+final method - If we want display something which will always constant we can use final method. like showing all the users in a database can be final.
+final classes -  this can be a child class as it shouldn't be inherited  a real life example is if acer nitro class which is a child class of AcerLaptop class, this acer nitro class can be final class as it should not be inherited as there are not sub variants to a acer nitro laptops.
 
 
 

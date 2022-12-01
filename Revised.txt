@@ -1,0 +1,7 @@
+How much memory is allocated when an object is created in Java?
+The heap memory used by a Java object includes memory for reference fields (4 bytes each);
+
+Is JVM present in all the machine? Is JDK, JRE and JVM platform independent?
+No, JVM does not come with OS, you need to download JRE or JDK. Java is platform independent but JVM/JRE/JDK are highly platform dependent. In fact JVM/JRE being platform dependent is what makes java platform independent. As it is responsibility of JVM to convert platform independent bytecote to platform dependent/ machine understandable code.
+
+
