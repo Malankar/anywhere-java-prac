@@ -16,5 +16,24 @@ Protected
 Fields and methods marked by the protected access modifier will be visible:
 within all classes included in the same package as ours;
 within all classes that inherit our class.
+Eg.: Image a SecretAgent class that represents a secret agent in some intelligence service,  as well as a top_secret package that contains this class and its descendants such as FBISecretAgent, MI6SecretAgent etc.
+Inside the SecretAgent class, we want to implement an agent counter. It will increase when a new agent is created somewhere in the program.
+But our agents are secret! This means that they and no one else should know how many of them exist. 
+We can add the protected modifier to the agent_counter field. Then instances of other secret agent classes and other classes located in that top_secret package can get its value.
 
+Default
+Default modifier, also known as the package visible modifier. It's not indicated by a keyword, since Java applies it by default to all fields and methods. 
+If you write int x=10 then x varaible will be visible only throughout the package.
+Eg: Imagine that we have a 'services' package. It contains various classes that work with a database. For example, there's a UserService class that reads user data from the database, a CarService class that reads car data from the same database, and other classes, each of which works with specific types of objects and reads corresponding data from the database.
+But if the data in the database is in one format and we need it in another. 
+Imagine that users' birthdates in the database is stored as <TIMESTAMP WITH TIME ZONE>
+and instead we need the simplest format ddmmyy
+To solve this problem, inside the services package, we can create a special Mapper class. It will be responsible for converting data from the database into our familiar format. We declare our helper class simply as class Mapper. This class is now only visible inside the package and can be used by Userservices and Carservices.
 
+Public
+Anything with public modifier can be accessible is any class of any package. 
+Eg. Suppose we have written a translator program that can translate Russian text into English. 
+And so we want our whole app to use it we can use the public modifier.
+
+Quick example
+Lets take a TV example, private is for all processes that occur inside a TV, but public is for the buttons on the remote control used to manage the TV. What's more, the user doesn't need to know how the television is built or how it works. The remote control is the set of public-methods: on(), off(), nextChannel(), previousChannel(), increaseVolume(), decreaseVolume() etc.
