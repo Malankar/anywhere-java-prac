@@ -1,4 +1,4 @@
-package accessModifiers.protectedModifier;
+package accessmodifiers.protectedmodifier;
 
 public class FBISecretAgent extends SecretAgent {
     public static void main(String[] args) {

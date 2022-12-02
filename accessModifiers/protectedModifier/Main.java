@@ -1,4 +1,4 @@
-package accessModifiers.protectedModifier;
+package accessmodifiers.protectedmodifier;
 
 public class Main {
   public static void main(String[] args) {

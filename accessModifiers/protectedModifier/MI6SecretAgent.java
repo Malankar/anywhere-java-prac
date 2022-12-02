@@ -1,4 +1,4 @@
-package accessModifiers.protectedModifier;
+package accessmodifiers.protectedmodifier;
 /* 
  * This class will not know if a fbi agent is created so the output of the print statement will be 0
  */

@@ -1,0 +1,12 @@
+What is naming convention?
+Java naming convention is a convention to follow as you decide what to name your identifiers such as class, package, variable, constant, method, etc. 
+
+Class & Interface- Pascal Case Eg. PascalClass 
+Method & Varaibles - Camel Case Eg. camelCase  
+Package - lowercase 
+Constant - UPPERCASE seperated by underscores.
+
+Tips:
+class - noun - ReverseString, Add2Numbers etc.
+interface - adjective 
+method - verb - running, walking etc.
