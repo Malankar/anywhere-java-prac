@@ -1,4 +1,4 @@
-package accessmodifiers.privatemodifier;
+package accessModifiers.privateModifier;
 
 /*
  * Basically, limiting access to fields and implementing getters and setters are the most common examples of how private would be used in real work.
@@ -40,7 +40,7 @@ class CatWP {
         // input parameter check
         if (age < 20 && age > 0) {
             this.age = age;
-            System.out.println("Set the age to: "+age);
+            System.out.println("Set the age to: " + age);
         } else {
             throw new Exception("Age is not valid");
         }
@@ -68,4 +68,3 @@ public class Private {
         }
     }
 }
-
