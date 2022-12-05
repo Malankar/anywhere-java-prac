@@ -1,4 +1,4 @@
-package accessModifiers.privateModifier;
+package accessmodifiers.privatemodifier;
 
 /*
  * We made a serious mistake here: We make our data public, which allowed fellow programmers to access the fields directly and change their values. What's more... these values were assigned without any checks. This means that our program could create a cat named "" with an age of -1000 years and weight of 0.

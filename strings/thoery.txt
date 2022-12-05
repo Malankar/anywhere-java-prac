@@ -1,0 +1,57 @@
+What is string?
+String is an object that represents a sequence of characters.
+
+How is string memory allocated?
+Let take an example of String str="string"
+Here str is the sequence of 6 characters which are s, t, r, i, n, and g.
+Here this characters are stored in a sequence in the memory.
+Suppose s is at memory location 128 then t will be at 129 and so on.
+As we now know the array is immutable, which means that it can not be changed after initialization, therefore the string is immutable as well.
+
+Ways of String initialization?
+There are two ways to initialize a string.
+String Literals
+New Operator
+
+String Literal
+Whenever the compiler interprets a string literal, it is always converted to the String object.
+Eg. String str = "string";
+
+New Operator
+We can also initialize a string by using the new operator.
+String strNew = new String("using new operator");
+
+Why StringBuilder and String buffer?
+As we know that the String class object is immutable so whenever we need to change the string it never mutates the current object but the changed value is always stored as a new String object. So if we need to change the value, again and again, memory will be consumed as well.For this reason Java has provided us with StringBuilder and StringBuffer
+
+
+StringBuffer?
+StringBuffer is a peer class of String that provides much of the functionality of strings. Its represents growable and writable character sequences.
+StringBuffer may have characters and substrings inserted in the middle or appended to the end. It will automatically grow to make room for such additions and often has more characters preallocated than are actually needed, to allow room for growth.
+
+
+Why do we use a string buffer when a string builder gives more performance?
+Stringbuilder was not introduced until java 5, both of them have their own usage and hence co-exist.
+A string builder is not thread safe, so per se if multiple threads are trying to modify the same instance of a StringBuilder this will lead to a inconsistent state and the output would be unexpected. However this is more suitable to be used in a thread safe environment as it does not have the synchronization overhead which is irrelevant in that case.
+StringBuffer on the other hand is Thread safe which means an instance of it can only be modified by one and only one instance at one point of time. It obiviously comes with a performance hit for synchronization.
+
+What does thred safe means?
+Suppose there is getCount which increments the count by 1 and returns it.
+If multiple thread call getCount() approximately same time each of these operations may coincide or overlap with each other for example while thread 1 is updating value, thread 2 reads and still gets old value, which eventually let thread 2 override thread 1 increment and one count is lost because multiple threads called it concurrently.
+
+
+
+What happens if two strings have same value?
+If we have str="avdhut" and str2="avdhut"
+Here, variable is created in stact but before creating the object to store the value "avdhut" the program searches heap if any other object containing the value "avdhut" already exist or not. So, when it find that an object already exist with the same value that object’s address is stored in the variable
+
+Why languages do so?
+In many of the programs, we need to do a lot of string comparisons and this approach require string comparisons to be done only when they are created.
+
+
+Stringbuilder?
+StringBuilde represents the mutable sequence of characters. It provides an API, which is compatible with the StringBuffer class but it is not thread-safe. So where multiple threads are not involved, it is better to go with the StringBuilder class as it is faster than the StringBuffer class in many cases.
+
+Why is string builder faster than stringbuffer?
+StringBuffer is thread-safe and synchronized whereas StringBuilder is not. That’s why StringBuilder is faster than StringBuffer.
+

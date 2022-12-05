@@ -1,4 +1,4 @@
-package accessModifiers.protectedModifier;
+package accessmodifiers.protectedmodifier;
 
 public class SecretAgent {
   protected static int agentCount = 0;

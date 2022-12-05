@@ -1,9 +1,27 @@
-In Java, variables are only accessible inside the region they are created. This is called scope.
+What is scope of variable?
+Scope of a variable is the part of the program where the variable is accessible. 
+
+
+Why use scope of variable?
+Because without any scope, it would be a mess, and your code would not be scalable at all.
+Without scope, every time you want to create a variable, you have to check that this name does not exist in the whole program, or else you would break things.
+Let’s say you use the variable “userName” in one small part of your program.
+
+You would have variable names like :
+mainPage_userView1_userBlock1_userName
+userDashboard_userSettings_userDisplayFormatted_userName
+
+This will quickly become a nightmare for your brain. And the more code you write, the more problems you get, until you spend all your time chasing problems, solving them, and chasing other problems that appeared when you solved the previous one.
+With a scope you can declare a variable in a nested part of your program, use it, and forget about if it will change something in a larger scope.
+
+
+Types of Scope?
+Member Variables (Class Level Scope)
+These variables must be declared inside class (outside any function). They can be directly accessed anywhere in class.
 
 Method Scope
 Variables declared directly inside a method are available anywhere in the method following the line of code in which they were declared:
 
 Block Scope
 A block of code refers to all of the code between curly braces {}.
-
-Variables declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared:
+Variables declared inside blocks of code are only accessible by the code between the curly braces.

@@ -1,4 +1,4 @@
-package accessModifiers.privateModifier;
+package accessmodifiers.privatemodifier;
 
 /*
  * Basically, limiting access to fields and implementing getters and setters are the most common examples of how private would be used in real work.
