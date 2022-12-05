@@ -55,3 +55,6 @@ StringBuilde represents the mutable sequence of characters. It provides an API, 
 Why is string builder faster than stringbuffer?
 StringBuffer is thread-safe and synchronized whereas StringBuilder is not. That’s why StringBuilder is faster than StringBuffer.
 
+Why String is Immutable or Final in Java
+The String pool cannot be possible if String is not immutable in Java. A lot of heap space is saved by JRE. The same string variable can be referred to by more than one string variable in the pool. String interning(method of storing only one copy of each distinct string value ) can also not be possible if the String would not be immutable.
+The String is safe for multithreading because of its immutableness. Different threads can access a single "String instance". It removes the synchronization for thread safety because we make strings thread-safe implicitly.
