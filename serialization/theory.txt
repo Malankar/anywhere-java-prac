@@ -1,0 +1,53 @@
+What is Serialization?
+Serialization in Java is the process of converting the Object into a Byte Stream, to transfer the Object Code from one Java Virtual machine to another and recreate it using the process of Deserialization.
+Eg.
+Suppose you are we building an online game in which player comes in and creates a character which is an object and playes with it and takes the character to the next level like enchanments and superpowers something like that so, we want to store this values after he saves his progress in a file. This can be done with serialization. 
+
+
+Why do we need serialization?
+We need serialization in java for following reasons.
+Communication: Serialization involves the procedure of object serialization and transmission. This enables multiple computer systems to design, share and execute objects simultaneously.
+
+Caching: The time consumed in building an object is more compared to the time required for de-serializing it. Serialization minimizes time consumption by caching the giant objects.
+
+Deep Copy: Cloning process is made simple by using Serialization. An exact replica of an object is obtained by serializing the object to a byte array, and then de-serializing it.
+
+Cross JVM Synchronization: The major advantage of Serialization is that it works across different JVMs that might be running on different architectures or Operating Systems
+
+Persistence: The State of any object can be directly stored by applying Serialization on to it and stored in a database so that it can be retrieved later.
+
+How do we Serialize an Object?
+A Java object is serializable if and only if its class or any of its parent classes implement either the Serializable interface or its subinterface, Externalizable.
+
+
+Advantages of Serialization in Java?
+Serialization process is a built-in feature that does not require third-party software to execute Serialization
+The Serialization procedure is proven to be simple and easy to understand
+
+It is easy to use and simple to customize
+
+Serialized data streams support Encryption, Compression, Authentication and secure Java computing
+
+There are many critical technologies relying on serialization.
+
+
+Disadvantages of Serialization in Java?
+Objects while DeSerialization becomes brittle and they are not sure to be DeSerialized effectively.
+
+The Transient variables declared while Serialization creates memory space, but the constructor is not called which results in the failure in the initialization of transient variables resulting in a variation to the Standard Java Flow.
+
+The process of serialization is inefficient in terms of memory utilization.
+
+Serialization is not preferable to be used in the applications which need concurrent access without the requirement of third-party APIs, as Serialization does not offer any transition control mechanism per every SE.
+
+Serialization procedure fails to offer fine-grained control to access Objects.
+
+
+Transient Keyword
+Transient Keyword is a reserved keyword in Java. It is used as a variable modifier at the time of the Serialization process. Declaring a variable with Transient keyword avoids the variable from being Serialized.
+
+
+Best Practices while using Serialization in Java
+It is recommended use javadoc@serial tag for denoting Serializable fields.
+The .ser extension is preferred to be used for files representing serialized objects.
+It is not recommended for any static or transient fields to undergo default serialization.

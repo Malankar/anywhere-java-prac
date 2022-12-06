@@ -3,6 +3,10 @@ An exception is generally an unwanted event that interrupts the normal flow of y
 Eg. When we parseInt a string without a number it gives us a NumberFormatException
 
 What is difference between exception and error?
+We cannot handle error but we can handle exceptions Eg you ram is out of memory or your code is giving the wrong output these are errors which you have to solve but dividing by zero or file not found are exception which can be handled by try catch. 
+
+Types of Exception?
+We have two types of exception Checked and Unchecked.
 
 
 What if we dont handle the exception?
