@@ -1,0 +1,4 @@
+What do you mean by upcasting and downcasting?
+Upcasting is when you take an object and cast it to its superclass type or parent type.
+downcasting is when you take an object and cast it to its sub types or child class types.
+Eg: Suppose there is Animal class with a method makenoise it prints animals make noise and a child class dog which overrides the makenoise method by printing woof woof and an additional method growl which prints grr Upcasting would be taking a dog object and casting it to animal class and downcasting would be taking an animal object and casting it into dog type. 
