@@ -1,4 +1,12 @@
+What is casting?
+Casting means converting one datatype into anothe 
+
 What do you mean by upcasting and downcasting?
 Upcasting is when you take an object and cast it to its superclass type or parent type.
 downcasting is when you take an object and cast it to its sub types or child class types.
-Eg: Suppose there is Animal class with a method makenoise it prints animals make noise and a child class dog which overrides the makenoise method by printing woof woof and an additional method growl which prints grr Upcasting would be taking a dog object and casting it to animal class and downcasting would be taking an animal object and casting it into dog type. 
+
+We should keep this in mind that the actual object type does not change because of casting. The Dog object is still a Dog object. Only the reference type gets changed.
+
+Why we do upcasting and downcasting?
+Suppose there is Animal class and Dog class now in the main function we call a doAnimalStuff method and pass it an Animal object as its parameter. Now when we call this method we can pass any animal obj and it will automatically upcast it to an animal type and then call the makeNoise method from the Animal class. Here if we didn't pass animal obj as the parameter and instead pass individual animals we have to write seperate methods for each animals but with upcasting we can just pass any object of subclass of the animal class and it will print how the makeNoise method is implemented in the subclass.
+

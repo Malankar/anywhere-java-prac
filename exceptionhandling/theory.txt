@@ -1,0 +1,12 @@
+What is an Exception?
+An exception is generally an unwanted event that interrupts the normal flow of your program. Exception are thrown only at runtime and not at compile time.
+Eg. When we parseInt a string without a number it gives us a NumberFormatException
+
+What is difference between exception and error?
+
+
+What if we dont handle the exception?
+The program just terminates and throws an exception. So inorder to keep our program running we should handle this exception which can be done by try and catch block. 
+
+Why would we need a finally block?
+Suppose you are making a database call and either it fails or succeds you want to close the database connection we can do that using the finally block.
