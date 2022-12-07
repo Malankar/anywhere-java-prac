@@ -1,0 +1,55 @@
+Why do we need multi threading?
+Imagine a stockbroker application with lots of complex capabilities.These are few of its functions:
+To download the last stock option prices
+To check prices for warnings
+Analyze historical data for any company.
+
+These are time-consuming functions. In a single-threaded runtime environment, these actions execute one after another. The next action can happen only when the previous one is finished.
+Now, if a historical analysis takes half an hour, and the user selects to perform a download and check afterward, the warning may come too late to, buy or sell stock as a result. Ideally, the download should happen in the background (that is, in another thread). That way, other processes could happen at the same time so that, for example, a warning could be communicated instantly. All the while, the user is interacting with other parts of the application. The analysis, too, could happen in a separate thread, so the user can work with the rest of the application while the results are being calculated.
+
+
+What are Threads ?
+A thread is a lightweight process. It is created and controlled using the Thread class. 
+A multithreaded program contains two or more parts that can run concurrently. Each part of such a program is called thread and each thread defines a separate path of execution. 
+
+
+Thread lifecycle?
+A thread can lie only in one of the shown states at any point of time.
+New - When thread is created 
+Runnable - Once create we start it.
+Running - In this thread is executing run method.
+Waiting - When thread is inactive 
+Terminated - When its completes its terminated.
+
+
+Where its used?
+When we have long running operation we use thread. We shouldn't burden the main thread instead create various thread to manage the task. 
+
+
+Usecase ?
+for downloading an image we can use thread. 
+
+Create a thread?
+By implementing the Runnable interface.
+By extending the Thread
+
+Difference between Thread Class and Runnable interface?
+A class extending Thread cannot extend anything else. With Runnable class can implement other interfaces
+Thread is extended when we want to overrider other methods Runnable is used for overriding run method only. Thread has tight coupling and Runnable has loose coupling means 
+
+
+Multithreading in Java ?
+Multi threading is the ability of a program to run two or more threads concurrently, where each thread can handle a different task at the same time making optimal use of the available resources.
+
+Synchronization?
+If Multiple Threads are going to work on the same single object we must Synchronize them on after other this is known as Synchronization. Or else the method will run asynchronously.
+
+Locks in Java? 
+Synchronization is built around an internal entity known as the lock or monitor. Each and every object has a lock associated with it. So a thread that needs consistent access to an object’s fields needs to acquire the object’s lock before accessing them, and then release the lock when the work is done.
+
+When we need it?
+We need in multithreading when multiple threads are working on the same single object. 
+
+Thread pool?
+Java thread pool manages the pool of worker threads and contains a queue that keep the tasks waiting to get executed.
+
