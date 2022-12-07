@@ -1,5 +1,5 @@
 What is casting?
-Casting means converting one datatype into anothe 
+Casting means converting one datatype into another.
 
 What do you mean by upcasting and downcasting?
 Upcasting is when you take an object and cast it to its superclass type or parent type.
