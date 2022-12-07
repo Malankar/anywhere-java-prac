@@ -14,12 +14,12 @@ A multithreaded program contains two or more parts that can run concurrently. Ea
 
 
 Thread lifecycle?
-A thread can lie only in one of the shown states at any point of time.
+A thread can lie only in one of these states at any point of time.
 New - When thread is created 
 Runnable - Once create we start it.
 Running - In this thread is executing run method.
 Waiting - When thread is inactive 
-Terminated - When its completes its terminated.
+Terminated - When its completed its terminated.
 
 
 Where its used?
@@ -35,14 +35,14 @@ By extending the Thread
 
 Difference between Thread Class and Runnable interface?
 A class extending Thread cannot extend anything else. With Runnable class can implement other interfaces
-Thread is extended when we want to overrider other methods Runnable is used for overriding run method only. Thread has tight coupling and Runnable has loose coupling means 
+Thread is extended when we want to override other methods Runnable is used for overriding "run" method only. Thread has tight coupling and Runnable has loose coupling means 
 
 
 Multithreading in Java ?
 Multi threading is the ability of a program to run two or more threads concurrently, where each thread can handle a different task at the same time making optimal use of the available resources.
 
 Synchronization?
-If Multiple Threads are going to work on the same single object we must Synchronize them one after other this is known as Synchronization. Or else the method will run asynchronously.
+If Multiple Threads are going to work on the same single object we must Synchronize them one after other this is known as Synchronization.
 
 Locks in Java? 
 Synchronization is built around an internal entity known as the lock or monitor. Each and every object has a lock associated with it. So a thread that needs consistent access to an object’s fields needs to acquire the object’s lock before accessing them, and then release the lock when the work is done.
