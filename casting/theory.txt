@@ -1,12 +1,22 @@
 What is casting?
 Casting means converting one datatype into another.
 
-What do you mean by upcasting and downcasting?
-Upcasting is when you take an object and cast it to its superclass type or parent type.
-downcasting is when you take an object and cast it to its sub types or child class types.
+What is upcasting why we need it in java?
+Upcasting is the process of casting a subclass object to a superclass type. In Java, upcasting is performed automatically or implicitly, so you don't have to do anything special to make it happen. 
+
+Usecase
+The reason we need upcasting in Java is because it allows us to treat objects of different types in a uniform manner. This can be useful when working with collections of objects, or when using method overrides. 
+
+For example, Let's say you have a collection of Shape objects, where Shape is a superclass that defines the basic properties and behavior of a shape, and Circle, Square, and Triangle are subclasses that each define a specific type of shape. With upcasting, you can add objects of any of these subclasses to the collection, and then iterate through the collection and call methods on each object without having to check the specific type of each object. You can also call the draw method defined in shape object on these and it will override the shape method with the corresponding shape method implementation.
+
 
 We should keep this in mind that the actual object type does not change because of casting. The Dog object is still a Dog object. Only the reference type gets changed.
 
-Why we do upcasting and downcasting?
-Suppose there is Animal class and Dog class now in the main function we call a doAnimalStuff method and pass it an Animal object as its parameter. Now when we call this method we can pass any animal obj and it will automatically upcast it to an animal type and then call the makeNoise method from the Animal class. Here if we didn't pass animal obj as the parameter and instead pass individual animals we have to write seperate methods for each animals but with upcasting we can just pass any object of subclass of the animal class and it will print how the makeNoise method is implemented in the subclass.
-
+Downcasting in java?
+Downcasting is the opposite of upcasting. It is the process of casting an object from a superclass type to a subclass type. In Java, downcasting is not performed automatically, so you have to explicitly specify the type to which you want to cast the object.
+Usecase
+One common use case for downcasting in Java is when you have an object of a superclass type, but you know that it is actually an instance of one of the subclasses. In this situation, you can downcast the object to the appropriate subclass type in order to access the subclass-specific methods and properties that are not available on the superclass.
+Example:
+In the example of shapes we can consider making an object of circle and passing that to a method which takes shape object now we can downcast this shape parameter into a circle class object and then use the setRadius method in the circle class on that. 
+Note:
+It's important to note that downcasting can be dangerous, because if you try to downcast an object to a subclass type that it is not actually an instance of, you will get a ClassCastException at runtime. Therefore, you should only use downcasting when you are absolutely certain that the object is of the correct subclass type.
