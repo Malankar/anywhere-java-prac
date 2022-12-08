@@ -4,6 +4,7 @@ To download the last stock option prices
 To check prices for warnings
 Analyze historical data for any company.
 
+
 These are time-consuming functions. In a single-threaded runtime environment, these actions execute one after another. The next action can happen only when the previous one is finished.
 Now, if a historical analysis takes half an hour, and the user selects to perform a download and check afterward, the warning may come too late to, buy or sell stock as a result. Ideally, the download should happen in the background (that is, in another thread). That way, other processes could happen at the same time so that, for example, a warning could be communicated instantly. All the while, the user is interacting with other parts of the application. The analysis, too, could happen in a separate thread, so the user can work with the rest of the application while the results are being calculated.
 
@@ -39,7 +40,11 @@ Thread is extended when we want to override other methods Runnable is used for o
 
 
 Multithreading in Java ?
-Multi threading is the ability of a program to run two or more threads concurrently, where each thread can handle a different task at the same time making optimal use of the available resources.
+Multithreading in Java refers to the ability of the Java virtual machine (JVM) to execute multiple threads concurrently. A thread is a separate execution path within a program, and multithreading allows multiple threads to run simultaneously, allowing a program to perform multiple tasks at the same time.
+
+Multithreading can improve the performance and responsiveness of a Java program, as it allows multiple tasks to be executed concurrently. However, it also introduces complexity and can lead to synchronization issues if not used carefully.
+
+
 
 Synchronization?
 If Multiple Threads are going to work on the same single object we must Synchronize them one after other this is known as Synchronization. Or else the method will run asynchronously.

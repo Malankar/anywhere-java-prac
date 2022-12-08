@@ -16,8 +16,11 @@ Cross JVM Synchronization: The major advantage of Serialization is that it works
 
 Persistence: The State of any object can be directly stored by applying Serialization on to it and stored in a database so that it can be retrieved later.
 
+
+
 How do we Serialize an Object?
 A Java object is serializable if and only if its class or any of its parent classes implement either the Serializable interface or its subinterface, Externalizable.
+
 
 
 Advantages of Serialization in Java?
@@ -29,6 +32,7 @@ It is easy to use and simple to customize
 Serialized data streams support Encryption, Compression, Authentication and secure Java computing
 
 There are many critical technologies relying on serialization.
+
 
 
 Disadvantages of Serialization in Java?
