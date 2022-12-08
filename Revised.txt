@@ -1,7 +1,11 @@
 How much memory is allocated when an object is created in Java?
-The heap memory used by a Java object includes memory for reference fields (4 bytes each);
+The amount of memory required to create an object in Java depends on the size of the object and the type of its fields. In general, an object in Java requires a minimum of 8 bytes of memory, plus the memory required to store the object's fields. The exact amount of memory required will vary depending on the specific object and the types of its fields.
+For example, an object with no fields will require at least 8 bytes of memory. An object with a single int field will require at least 12 bytes of memory (8 bytes for the object itself, plus 4 bytes for the int field). An object with a reference to another object will require at least 16 bytes of memory (8 bytes for the object itself, plus 8 bytes for the reference to the other object). And so on.
+It's important to note that the actual amount of memory required by an object in Java can vary depending on a number of factors, including the Java Virtual Machine (JVM) implementation and the runtime environment. Therefore, the numbers provided here are just estimates, and the actual memory requirements for a given object may be different. It's also worth noting that Java uses a garbage collector to automatically reclaim memory that is no longer being used by objects, so you don't have to worry about manually freeing memory in most cases.
 
 Is JVM present in all the machine? Is JDK, JRE and JVM platform independent?
 No, JVM does not come with OS, you need to download JRE or JDK. Java is platform independent but JVM/JRE/JDK are highly platform dependent. In fact JVM/JRE being platform dependent is what makes java platform independent. As it is responsibility of JVM to convert platform independent bytecote to platform dependent/ machine understandable code.
+
+
 
 

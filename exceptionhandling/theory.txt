@@ -1,4 +1,4 @@
-What is an Exception?
+What is an Exception ?
 An exception is generally an unwanted event that interrupts the normal flow of your program. 
 It can occur for various reasons say-
 A user has entered an invalid data
@@ -6,6 +6,7 @@ File not found
 A network connection has been lost in the middle of communications
 The JVM has run out of a memory
 etc.
+Exception handling in Java is a mechanism for handling runtime errors that may arise during the execution of a program.
 
 What is Exceptions Hierarchy ?
 All exception and error types are subclasses of class Throwable, which is the base class of hierarchy. One branch is headed by Error which occurs at run-time and other by Exception that can happen either at compile time or run-time.
@@ -34,6 +35,20 @@ Why would we need a finally block?
 Suppose you are making a database call and either it fails or succeds you want to close the database connection we can do that using the finally block.
 
 
-Throw and Throws in java?
-throw keyword is used to throw an exception object. We create a new object of the Exception class for which we want to throw the exception. 
-Throws keyword is used to declare an exception as well as bypass the caller. It throws the exception so it can be handle by the method which is calling this method.
+throw and throws keyword in java ?
+The throw keyword in Java is used to explicitly throw an exception. This is typically done when a specific condition is met, and the program needs to interrupt its normal flow of execution to handle the exception.
+
+For example, if a program is reading from a file and the file is not found, the program may throw a FileNotFoundException. This would cause the program to stop executing the current code and transfer control to the catch block where the exception can be handled.
+
+The throws keyword, on the other hand, is used to indicate that a method may throw an exception. This is typically used in the method signature to let the caller of the method know that they need to handle the potential exception.
+
+For example, a method that reads from a file may have a signature like this:
+
+readFile(String fileName) throws FileNotFoundException
+
+This tells the caller that they need to handle the possibility of a FileNotFoundException being thrown by the method. If the caller does not handle the exception, it will be propagated up the call stack until it is caught by another method or the program terminates.
+
+why we propogate exception in java?
+We propagate exceptions in Java to allow the error to be handled at a higher level in the program. This is important because it allows the program to continue running smoothly and avoid crashing.
+When an exception is thrown, the current method stops executing and control is transferred to the catch block. If the catch block is not able to handle the exception, it can be propagated up the call stack to the caller of the method. This allows the error to be handled by a method that has the necessary information and resources to deal with it.
+Propagating exceptions also allows for a more organized and structured approach to handling errors. Instead of having each method handle its own exceptions, the exceptions can be handled at a higher level where they can be dealt with more effectively. This also makes it easier to identify and fix errors in the code.
