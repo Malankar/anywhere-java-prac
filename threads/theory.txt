@@ -42,7 +42,7 @@ Multithreading in Java ?
 Multi threading is the ability of a program to run two or more threads concurrently, where each thread can handle a different task at the same time making optimal use of the available resources.
 
 Synchronization?
-If Multiple Threads are going to work on the same single object we must Synchronize them one after other this is known as Synchronization.
+If Multiple Threads are going to work on the same single object we must Synchronize them one after other this is known as Synchronization. Or else the method will run asynchronously.
 
 Locks in Java? 
 Synchronization is built around an internal entity known as the lock or monitor. Each and every object has a lock associated with it. So a thread that needs consistent access to an object’s fields needs to acquire the object’s lock before accessing them, and then release the lock when the work is done.
