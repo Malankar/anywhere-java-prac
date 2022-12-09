@@ -16,6 +16,16 @@ A class extending Thread cannot extend anything else. With Runnable class can im
 Thread is extended when we want to override other methods Runnable is used for overriding "run" method only. Thread has tight coupling and Runnable has loose coupling means 
 
 
+
+Main thread in java?
+The main thread in Java is the thread in which the main() method of a Java program is executed. When a Java program is started, the JVM creates a main thread and calls the main() method on this thread. The main thread is responsible for executing the initial code of the program and for orchestrating the execution of other threads that may be created by the program.
+
+The main thread is created automatically by the JVM when the program is started, and it cannot be explicitly created or controlled by the program. It is a special thread that has a higher priority than other user-created threads, and it will continue to run until the program terminates.
+
+The main thread is an important part of a Java program, as it is responsible for the initial execution of the program and for managing the execution of other threads. Proper management of the main thread is essential for ensuring the stability and reliability of a Java program.
+
+
+
 Why do we need multi threading?
 Imagine a stockbroker application with lots of complex capabilities.These are few of its functions:
 To download the last stock option prices
