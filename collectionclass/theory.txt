@@ -5,7 +5,7 @@ On the other hand, the Collections class is a utility class that contains a numb
 
 
 Why we need collection interface?
-Collections classes are useful for organizing and storing data in a program. They provide a way to group related objects together and to manage them as a unit. This can make it easier to work with large amounts of data, and to perform common operations on that data.
+The Collection interface in Java is the root interface for all the collections in the Java Collection Framework. It provides a set of methods that all collections should implement, such as add(), remove(), and contains(). These methods allow collections to be used in a consistent manner, regardless of the specific implementation of the collection. 
 For example, a List collection can be used to store a list of strings, and then you can use the list's add method to add new strings to the list, or its contains method to check if a particular string is in the list.
 
 

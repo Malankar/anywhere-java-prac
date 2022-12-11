@@ -1,14 +1,20 @@
 package collectionclass;
 
-import java.util.ArrayList;
-import java.util.Collection;
+/* 
+ * ArrayList extends AbstractList class which extends Abstract collection class which implements Collection Interface
+ */
+import java.util.ArrayList; 
+import java.util.Collections;
 
 public class CollectionDemo {
   public static void main(String[] args) {
-    Collection<Integer> obj=new ArrayList<>();
-    obj.add(1);
-    obj.add(2);
-    obj.add(3);
+    ArrayList<String> obj=new ArrayList<>();
+    obj.add("hello");
+    obj.add("world");
+    obj.add("foo");
+    obj.add("bar");
+    System.out.println(obj.get(2));
+    Collections.sort(obj);
     System.out.println(obj);
   }
 }
