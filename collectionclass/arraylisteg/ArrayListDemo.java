@@ -26,7 +26,6 @@ public class ArrayListDemo {
       System.out.println((i + 1) + ": " + tasks.get(i));
     }
   }
-
   public static void main(String[] args) {
     ArrayListDemo toDoList = new ArrayListDemo();
     toDoList.addTask("Take out the trash");
@@ -34,7 +33,9 @@ public class ArrayListDemo {
     toDoList.addTask("Finish homework");
     toDoList.printTasks();
 
-    toDoList.updateTask(1, "Clean the kitchen");
-    toDoList.printTasks();
+    /** 
+      toDoList.updateTask(1, "Clean the kitchen");
+      toDoList.printTasks(); 
+    */
   }
 }
