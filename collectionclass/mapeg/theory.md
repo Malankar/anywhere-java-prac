@@ -11,7 +11,7 @@ A HashMap is a Map implementation that uses a hash table to store its elements. 
 
 A TreeMap is a Map implementation that maintains its elements in ascending order based on their keys. It uses a red-black tree data structure to store its elements. It does not allow null keys, but it does allow null values.
 
-A LinkedHashMap is a Map implementation that maintains the order in which elements were inserted. It uses a doubly-linked list to store its elements, and provides fast lookups and allows null values and null keys.
+A LinkedHashMap is a Map implementation that maintains the order in which elements were inserted. It uses a doubly-linked list to store its elements, and provides fast lookups and does not allows null values and null keys.
 ```
 
 #### **`When to use what?`**
@@ -43,7 +43,7 @@ A TreeMap is a good choice when you need to store data in a map and you want to 
 
 However, TreeMap has slower lookup and insertion performance compared to a HashMap. This is because a TreeMap uses a tree data structure to store the elements, whereas a HashMap uses a hash table. If you need fast lookup and insertion performance, a HashMap may be a better choice.
 
-Another potential disadvantage of a TreeMap is that it does not support null keys or values. If you need to store null keys or values in your data set, you may want to use a different data structure that does support null keys and values, such as a HashMap or a LinkedHashMap.
+Another potential disadvantage of a TreeMap is that it does not support null keys or values. If you need to store null keys or values in your data set, you may want to use a different data structure that does support null keys and values, such as a HashMap.
 ```
 
 #### **`Usecases?`**
@@ -54,4 +54,22 @@ Storing a dictionary, where the words are the keys and the definitions are the v
 
 ```
 
+#### **`When to use not use LinkedHashMap ?`**
+```
+A LinkedHashMap is a data structure that implements the Map interface and maintains the order of the elements. It is similar to a HashMap, which also implements the Map interface, but a LinkedHashMap maintains the order of the elements whereas a HashMap does not.
+
+A LinkedHashMap is a good choice when you need to store data in a map and you want to maintain the order of the elements. For example, if you need to store a list of tasks and retrieve them in the order in which they were added, a LinkedHashMap would be a good choice.
+
+However, there are some situations where a LinkedHashMap may not be the best choice. One potential disadvantage of a LinkedHashMap is that it has slower lookup and insertion performance compared to a HashMap. This is because a LinkedHashMap uses a linked list to store the elements, whereas a HashMap uses a hash table. If you need fast lookup and insertion performance, a HashMap may be a better choice.
+
+Another potential disadvantage of a LinkedHashMap is that it does not support null keys or values. If you need to store null keys or values in your data set, you may want to use a different data structure that does support null keys and values, such as a HashMap.
+
+```
+
+#### **`Usecases?`**
+```
+Storing a history of recently visited web pages, where the URLs are the keys and the page titles are the values. A LinkedHashMap would allow you to maintain the order in which the pages were visited, making it easy to retrieve and display the history in the correct order.
+
+LinkedHashMap is a good choice when you need to store data in a map and you want to maintain the order of the elements. It is especially useful when you need to iterate over the elements in the order in which they were added, as it maintains the insertion order of the elements.
+```
 
