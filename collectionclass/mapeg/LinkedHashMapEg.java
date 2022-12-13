@@ -6,10 +6,10 @@ public class LinkedHashMapEg {
   public static void main(String[] args) {
     LinkedHashMap<String, String> history = new LinkedHashMap<>();
 
-    history.put("https://en.wikipedia.org/", "Wikipedia, the free encyclopedia");
-    history.put("https://www.google.com/", "Google");
-    history.put("https://www.facebook.com/", "Facebook - Log In or Sign Up");
-    history.put("https://www.youtube.com/", "YouTube");
+    history.put("Wikipedia, the free encyclopedia", "https://en.wikipedia.org/");
+    history.put("Google", "https://www.google.com/");
+    history.put("Facebook - Log In or Sign Up", "https://www.facebook.com/");
+    history.put("YouTube", "https://www.youtube.com/");
     
     for (String url : history.keySet()) {
       String title = history.get(url);
