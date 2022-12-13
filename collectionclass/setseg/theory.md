@@ -39,7 +39,7 @@ A tree set is a data structure that stores unique elements in a sorted order. It
 
 #### **`When not to use Treeset?`**
 ```
-A tree set is not the best choice for situations where you need to quickly check if an element exists in a collection or where you do not need to maintain the order of the elements. In such cases, you may want to use a different data structure such as a hash set or an array list, which are better suited for these tasks. Additionally, a tree set is not the most efficient data structure for situations where you need to access elements by their index, as it does not provide fast indexed access to elements like an array or an array list. In such cases, you may want to use an array or an array list instead.
+A tree set is not the best choice for situations where you need to quickly check if an element exists in a collection or where you do not need to maintain the order of the elements. In such cases, you may want to use a different data structure such as a hash set, which are better suited for these tasks. Additionally, a tree set is not the most efficient data structure for situations where you need to access elements by their index, as it does not provide fast indexed access to elements like an array or an array list. In such cases, you may want to use an array or an array list instead.
 ```
 
 #### **`When to use and not to use LinkedHashSet?`**

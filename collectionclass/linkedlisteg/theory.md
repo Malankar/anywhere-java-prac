@@ -5,7 +5,7 @@ A linked list is a data structure that consists of a group of nodes which togeth
 
 #### **`How the LinkedList works?`**
 ```
-The LinkedList stores its items in "containers." The list has a link to the first container and each container has a link to the next container in the list. To add an element to the list, the element is placed into a new container and that container is linked to one of the other containers in the list.
+The LinkedList stores its items in "nodes." The list has a link to the first node and each node has a link to the next node in the list. To add an element to the list, the element is placed into a new node and that node is linked to one of the other nodes in the list.
 ```
 
 #### **`Why are they used?`**

@@ -13,19 +13,5 @@ Why we need collections class?
 The Collections class, provides utility methods that are commonly used when working with collections. These methods can make it easier to perform operations on collections, such as sorting or searching. For example, you can use the sort method in the Collections class to sort a List, or the binarySearch method to search for a specific element in a List.
 
 
-What is ArrayList?
-An ArrayList is a dynamic data structure in Java that allows you to store and access a large number of elements efficiently. It is part of the Java Collections Framework, which is a set of classes and interfaces that provide a standard way of working with collections of objects.
-ArrayList is similar to an array, but it can grow and shrink dynamically as elements are added or removed. This makes it a more flexible and convenient data structure to use compared to an array.
-
-
-When are they useful?
-One main advantage of an ArrayList over other lists, such as a LinkedList or a Vector, is that it provides faster access to the elements by index. This is because an ArrayList uses an array data structure to store the elements, and arrays provide fast random access to the elements by index. 
-
-
-Usecase?
-Imagine you are creating a game or application that presents the user with a list of options, and the user can select one or more options to perform an action. You could use an ArrayList to store the selected options, and then perform the action based on the items in the list.
-
-
-
 What is Wrapper Class?
 A wrapper class is a class in Java that encapsulates a primitive data type. This allows you to treat primitive data types like objects, which can be useful in certain situations.

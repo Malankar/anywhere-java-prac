@@ -10,7 +10,7 @@ The ArrayList class has a regular array inside it. When an element is added, it 
 
 #### **`Why use it?`**
 ```
-Arraylist is to provide an efficient way to store and access data, as well as to easily add and remove items from the collection. Arraylists are commonly used in programming because they allow for fast and convenient access to data, and they are able to dynamically resize themselves to accommodate new items as needed.
+Arraylist is to provide an efficient way to store, access and modify data. Arraylists are commonly used because they allow for fast and convenient access to data, and they are able to dynamically resize themselves to accommodate new items as needed.
 ```
 
 #### **`Usecase?`**
@@ -25,18 +25,29 @@ use case for an arraylist would be to store a list of items that need to be acce
 
 
 #### **`Why its not efficient for larger data sets?`**
-
 ```
 When an arraylist needs to resize its array, it must allocate a new, larger array in memory and copy all of the items from the old array to the new array. This can be a time-consuming process, and it can also lead to higher memory usage because the arraylist now has two arrays in memory: the old array and the new array. This can make an arraylist less efficient for accessing data and using memory compared to other data structures.
 ```
-
+#### **`Advantage of Arraylist?`**
+```
+Provides fast iteration of elements using indexing.
+It provides memory coherance meaning the elements are stored in a sequential memory location.
+Fast random access of elements due to memory coherance.
+```
 #### **`Disadvantage of Arraylist?`**
 ```
-One of the main disadvantages of an arraylist is that it is not as efficient for accessing data as some other data structures. This is because an arraylist uses a dynamic array to store its data, which can lead to slower access times and higher memory usage compared to other data structures. 
+Addition or deletion of data from the middle is time consuming as data needs to be shifted to update the list
+Resizing of an arraylist when it reaches it's capacity with it initial capacity which is 10 is a costlier process as the elements will be copied from old to new space with 50% more capacity.
 ```
+
+#### **`Why not use hashmap instead of arraylist?`**
+```
+Because they serve different purposes and have different characteristics. For example, if you need to store a collection of objects and maintain their order, then an ArrayList would be a better choice than a HashMap. On the other hand, if you need to store a collection of key-value pairs and look up values by their keys, then a HashMap would be a better choice than an ArrayList.
+```
+
 
 #### **`Keypoint`**
 ```
 Fast lookup and easy manipulation. 
-Slow access times and higher memory consumption on large data.
+Higher memory consumption on large data.
 ```
