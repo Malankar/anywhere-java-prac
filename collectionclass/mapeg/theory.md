@@ -73,3 +73,11 @@ Storing a history of recently visited web pages, where the page title are the ke
 LinkedHashMap is a good choice when you need to store data in a map and you want to maintain the order of the elements. It is especially useful when you need to iterate over the elements in the order in which they were added, as it maintains the insertion order of the elements.
 ```
 
+#### **`How does HashMap hashes the data`**
+```
+In Java, a HashMap is a data structure that maps keys to values. It works by using a hashing function to compute the index at which each key is stored in the map. When a key is added to a HashMap, the hashing function is used to determine the index at which the key-value pair will be stored. The key-value pair is then stored at that index in the map.
+
+The process of hashing a key involves passing the key through a mathematical function (the hashing function) that produces a hash value. This hash value is then used to determine the index at which the key-value pair will be stored in the map.
+
+The specific way in which a HashMap hashes keys can vary depending on the implementation, but in general, the goal of the hashing function is to produce a hash value that is evenly distributed across the possible range of values, so that key-value pairs are distributed evenly throughout the map. This helps to ensure efficient performance, because it means that on average, each index in the map will have approximately the same number of key-value pairs.
+```
