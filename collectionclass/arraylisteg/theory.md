@@ -51,3 +51,17 @@ Because they serve different purposes and have different characteristics. For ex
 Fast lookup and easy manipulation. 
 Higher memory consumption on large data.
 ```
+
+#### **`What is initial capacity of arraylist and how does it shink or grow when adding new items into the collection?`**
+```
+The initial capacity of an ArrayList in Java is the number of elements that the list can hold without needing to resize its underlying array. This initial capacity is determined by the constructor that is used to create the list.
+
+ArrayList constructor, which takes no arguments, creates a list with an initial capacity of 10 elements. This means that the list can hold up to 10 elements without needing to resize its underlying array.
+
+If the list reaches its initial capacity and more elements are added to it, the list will automatically resize its underlying array to accommodate the additional elements. 
+
+The exact amount by which the list's initial capacity is increased when its underlying array is resized depends on the implementation of the ArrayList class. In the default implementation of ArrayList, the new array is created with a capacity that is 1.5 times the size of the old array, plus 1. So, for example, if the old array has a capacity of 10 elements, the new array will have a capacity of 16 elements (1.5 * 10 + 1 = 16).
+
+When the ArrayList class in Java increases the initial capacity of its underlying array, it increases the capacity by 1.5 times the size of the old array, plus 1. This means that the new array will be 50% larger than the old array, plus 1 element.
+
+```

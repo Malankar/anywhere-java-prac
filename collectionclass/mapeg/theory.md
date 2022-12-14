@@ -81,3 +81,21 @@ The process of hashing a key involves passing the key through a mathematical fun
 
 The specific way in which a HashMap hashes keys can vary depending on the implementation, but in general, the goal of the hashing function is to produce a hash value that is evenly distributed across the possible range of values, so that key-value pairs are distributed evenly throughout the map. This helps to ensure efficient performance, because it means that on average, each index in the map will have approximately the same number of key-value pairs.
 ```
+
+#### **`What is initial capacity of hashmap and how does it shink or grow when adding new items into the collection?`**
+```
+The initial capacity of a HashMap in Java is simply the number of elements that the map can hold without needing to resize itself. This initial capacity is determined by the constructor that is used to create the map.
+
+HashMap constructor, which takes no arguments, creates a map with an initial capacity of 16 elements. 
+
+This means that the map can hold up to 16 elements without needing to resize itself.
+If the map reaches its initial capacity and more elements are added to it, the map will automatically resize itself to accommodate the additional elements. This is done by creating a new, larger map and copying the existing elements from the old map to the new map. 
+
+The exact amount by which the map's initial capacity is increased when it is resized depends on the loadFactor of the map. The loadFactor is a parameter that specifies the maximum ratio of elements to capacity that the map is allowed to have before it is resized. By default, the HashMap constructor sets the loadFactor to 0.75, which means that the map will be resized when the number of elements in the map exceeds 75% of the map's initial capacity.
+
+You can change the loadFactor of a HashMap in Java by using a constructor that takes the loadFactor as an argument.
+
+Changing the loadFactor of a HashMap can affect the map's initial capacity and how often it is resized.
+
+A lower loadFactor will cause the map to be resized more frequently, which can result in better performance if the map is frequently adding and removing elements. A higher loadFactor, on the other hand, will cause the map to be resized less frequently, which can result in better performance if the map is relatively static and does not frequently add or remove elements.
+```
