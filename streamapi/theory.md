@@ -10,10 +10,15 @@ The Stream API, on the other hand, is a Java API that provides a set of classes 
 
 In short, a stream is a sequence of data elements that can be processed, while the Stream API is a Java API that provides a set of classes and interfaces for working with streams.
 ```
-#### **`What are lambda function why use in java ?`**
+#### **`What are lambda expression why use in java ?`**
 ```
-Lambda functions, also known as anonymous functions, are a way to create and use functions without giving them a name. 
-You can use lambda functions with functional interfaces, which are interfaces that have only one abstract method. You can also use lambda functions to create anonymous inner classes, which are classes that do not have a name and are defined and used within the context of another class.
+A lambda expression is a block of code that can be passed around and executed at a later time. It is often used in Java as a way to make code more concise and easier to read. A lambda expression is made up of two parts: the arguments and the body. The arguments specify the input to the lambda expression, and the body contains the code that will be executed when the lambda expression is run.
+
+These are also known as anonymous functions, are a way to create and use functions without giving them a name. 
+
+In Java, a lambda expression can be used with functional interfaces, which are interfaces that have only one abstract method. This allows you to create objects that implement the functional interface using a concise syntax.
+
+Lambda expressions can also be used to create anonymous inner classes, which are classes that do not have a name and are defined and used within the context of another class. This allows you to write code that is more concise and easier to read than if you were to use traditional inner classes.
 ```
 
 #### **`Types of operation to perform on a stream ?`**
