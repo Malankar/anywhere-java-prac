@@ -10,16 +10,34 @@ The Stream API, on the other hand, is a Java API that provides a set of classes 
 
 In short, a stream is a sequence of data elements that can be processed, while the Stream API is a Java API that provides a set of classes and interfaces for working with streams.
 ```
+#### **`What are lambda function why use in java ?`**
+```
+Lambda functions, also known as anonymous functions, are a way to create and use functions without giving them a name. 
+You can use lambda functions with functional interfaces, which are interfaces that have only one abstract method. You can also use lambda functions to create anonymous inner classes, which are classes that do not have a name and are defined and used within the context of another class.
+```
+
+#### **`Types of operation to perform on a stream ?`**
+```
+There are two types of operation on stream 
+Intermediate operations and Terminal operations
+
+Intermediate operations are operations that are applied to a stream to transform it in some way. For example, a filter operation is an intermediate operation that filters a stream based on a given predicate.
+
+Intermediate operations are called "intermediate" because they return a new stream that is the result of the operation, which can then be further transformed by other intermediate operations.
+
+Terminal operations, on the other hand, are operations that produce a result from a stream, or that cause some side-effect to occur. For example, A forEach operation is a terminal operation that applies a given function to each element in a stream, causing the function to be executed for each element.
+
+Terminal operations are called "terminal" because they consume the stream, after which it is no longer accessible.
+```
+
 
 #### **`Why we use it ?`**
 ```
 One reason why streams are useful in Java is that they provide a way to perform complex operations on data in a concise and declarative manner. For example, you can use streams to filter a collection of objects based on a certain criterion, and then perform a mapping operation on the resulting elements, all in a single statement. This can make your code more readable and easier to maintain.
 
-Another reason why streams are useful in Java is that they are designed to support parallel operations. This means that you can use streams to perform operations on data in parallel, which can improve the performance of your program.
+They are designed to support parallel operations. This means that you can use streams to perform operations on data in parallel, which can improve the performance of your program.
 
 Streams support lazy evaluation. This means that the operations performed on a stream are not executed until the stream is actually used. This can help to improve the performance of your program by allowing it to avoid performing unnecessary computations.
-
-Streams support parallel operations. This means that you can use streams to perform operations on data in parallel, which can improve the performance of your program by taking advantage of multiple cores or processors.
 
 Streams provide a consistent interface for working with different types of data sources. For example, you can use the same set of stream operations to process data from a file, a network connection, or a database, even though the underlying data sources may be very different. This can make it easier to write and maintain code that works with different types of data.
 ```
@@ -42,9 +60,11 @@ Overall, lazy evaluation is a useful technique for optimizing the performance an
 ```
 In Java, lazy evaluation can be used with the Stream API to optimize the performance of stream operations. The Stream API allows developers to perform functional-style operations on streams of data, such as filtering, mapping, and reducing.
 
-By default, the Stream API uses lazy evaluation to avoid performing unnecessary operations on the elements in a stream. For example, suppose we are filtering an array of element which are greater than 10 then the filter method will not actually evaluate any of the elements in the stream until a terminal operation, such as forEach or collect, is called on the resulting stream. 
+By default, the Stream API uses lazy evaluation to avoid performing unnecessary operations on the elements in a stream. For example, 
 
-This means that the filter operation will only be performed on the elements in the stream that are actually needed, and will not be performed on any elements that are not required.
+`Suppose we are filtering an array of element which are greater than 10 then the filter method will not actually evaluate any of the elements in the stream until a terminal operation, such as forEach or collect, is called on the resulting stream. 
+
+This means that the filter operation will only be performed on the elements in the stream that are actually needed, and will not be performed on any elements that are not required.`
 
 lazy evaluation is an important part of the Stream API, and allows developers to write efficient and performant code when working with streams of data in Java.
 ```
