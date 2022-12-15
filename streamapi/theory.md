@@ -4,9 +4,9 @@ Streams in Java are used to process collections of data in a declarative manner,
 ```
 #### **`What is difference between Streams and Streams API ?`**
 ```
-A stream is a sequence of data elements that can be processed in a declarative way. Streams can be created from various data sources, such as collections, arrays, or I/O resources, and support a range of different operations for processing the elements in the stream.
+A stream is a sequence of data elements that can be processed in a declarative way which means that the operations performed on the data are described, but not the specific details of how the operations are implemented. Streams in Java are used to process collections of data. Streams allow for the processing of data elements on an as-needed basis, which can be useful for handling large amounts of data that cannot be stored in memory all at once.
 
-The Stream API, on the other hand, is a Java API that provides a set of classes and interfaces for working with streams. The Stream API is part of the Java Collections Framework, and is located in the java.util.stream package. It provides a declarative programming model for working with streams, allowing developers to perform functional-style operations on streams of data, such as filtering, mapping, and reducing.
+The Stream API, on the other hand, is a Java API that provides a set of classes and interfaces for working with streams. It provides a declarative programming model for working with streams, allowing developers to perform functional-style operations on streams of data, such as filtering, mapping, and reducing.
 
 In short, a stream is a sequence of data elements that can be processed, while the Stream API is a Java API that provides a set of classes and interfaces for working with streams.
 ```
@@ -38,7 +38,7 @@ Terminal operations are called "terminal" because they consume the stream, after
 
 #### **`Why we use it ?`**
 ```
-One reason why streams are useful in Java is that they provide a way to perform complex operations on data in a concise and declarative manner. For example, you can use streams to filter a collection of objects based on a certain criterion, and then perform a mapping operation on the resulting elements, all in a single statement. This can make your code more readable and easier to maintain.
+Streams in Java provide a way to process data in a sequence, either one element at a time or in bulk. They allow developers to manipulate collections of data in a more convenient and efficient way than they could with traditional loops. For example, rather than using a for loop to iterate over a list of elements and perform a specific operation on each element, a developer could use a stream to express the same operation in a more concise and declarative manner. Streams can also be used to perform complex data processing tasks, such as filtering, mapping, reducing, and sorting, without the need for explicit loops or mutable data structures.
 
 They are designed to support parallel operations. This means that you can use streams to perform operations on data in parallel, which can improve the performance of your program.
 
