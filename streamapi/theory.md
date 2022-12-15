@@ -120,3 +120,14 @@ It's important to note that the order of the elements in the stream may not be p
 
 One potential use case for parallel streams would be to perform data-intensive operations on large collections of data, such as performing complex calculations on a large dataset in a scientific or financial application. By using a parallel stream, you can take advantage of multiple processors or cores to perform the operation more quickly and efficiently.
 ```
+
+
+#### **`How can we customize parallel streams in java`**
+```
+By default, a parallelStream in Java uses the default ForkJoinPool, which is created with the number of available processors as the parallelism level. However, it is possible to customize the parallelism level of a parallel stream by using the withParallelism method
+
+It is important to note that the parallelism level of a stream does not necessarily have to match the number of available processors on the system. In general, a higher parallelism level can improve the performance of a stream, but it can also lead to increased contention for shared resources and higher memory usage.
+
+Therefore, it is important to carefully consider the trade-offs and choose an appropriate parallelism level for your specific use case.
+
+```

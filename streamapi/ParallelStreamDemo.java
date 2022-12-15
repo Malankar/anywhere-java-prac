@@ -1,4 +1,4 @@
- import java.util.Arrays;
+import java.util.Arrays;
 import java.util.List;
 /* 
  *  A list of numbers is created and a parallel stream is created by calling the parallelStream() method on the list. The mapToInt() operation is then performed on the parallel stream, which maps each number in the stream to an integer.

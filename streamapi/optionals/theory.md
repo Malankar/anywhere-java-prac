@@ -14,3 +14,9 @@ So, even if the end result did look similar its still making clear to the user j
 
 Also Optional offers some other nice methods to deal with null values all together. 
 ```
+
+
+#### **`What is findFirst in java streams and how it associates with optionals?`**
+```
+In Java, the findFirst() method is a part of the Stream API, which is used to first element of a collection that matches a given condition. This method returns an Optional object, which is a container for a value that may or may not be present.
+```
