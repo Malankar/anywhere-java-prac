@@ -8,3 +8,8 @@ In Java, asynchronous operations are typically implemented using the Future and 
 
 ```
 
+#### **`What are Future and CompletableFuture`**
+```
+Future and CompletableFuture are interfaces in the Java standard library that are used to manage asynchronous computations. They provide methods to track the status of an asynchronous operation and to obtain its result when it is ready.
+```
+
