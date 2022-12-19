@@ -63,6 +63,15 @@ HTTP is a connectionless protocol, which means that the client and server do not
 
 HTTP is an extensible protocol, which means that it can be extended and enhanced through the use of headers and other mechanisms. This allows HTTP to support a wide range of applications and requirements, but also means that there can be a lot of variation in how it is used in different contexts.
 ```
+#### **`What is Rest ?`**
+```
+REST, or Representational State Transfer, is a way of organizing and structuring a web application that makes it easy to use and maintain. It does this by separating the application into different "resources" that can be accessed and manipulated through a set of standardized operations, called "methods."
+
+For example, let's say you have a web application that manages a list of movies. You could design the application as a RESTful web service, with a "movies" resource that can be accessed through methods like GET, POST, PUT, and DELETE. A client application, such as a web browser or a mobile app, could then send HTTP requests to the web service to retrieve a list of movies, add a new movie to the list, update an existing movie, or delete a movie from the list.
+
+REST is based on standard HTTP protocols, which makes it easy to use and integrate with other systems. It is also a flexible architecture that can be used to build web services that support a wide range of operations, making it a popular choice for building web-based applications.
+```
+
 #### **`Explain all the rest verbs ?`**
 ```
 In the HTTP protocol, a verb (also known as a method) is a special type of request header that specifies the type of action being requested by the client. There are several different HTTP verbs that can be used to request different types of actions from the server. 
