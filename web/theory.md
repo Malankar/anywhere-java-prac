@@ -74,12 +74,11 @@ REST is based on standard HTTP protocols, which makes it easy to use and integra
 
 #### **`Explain all the rest verbs ?`**
 ```
-In the HTTP protocol, a verb (also known as a method) is a special type of request header that specifies the type of action being requested by the client. There are several different HTTP verbs that can be used to request different types of actions from the server. 
-Some of them are:
+HTTP defines a set of request methods to indicate the desired action to be performed for a given resource.
 
 GET: This verb is used to request a resource from the server. It is used to retrieve web pages, images, and other types of content.
 
-HEAD: The HEAD verb is often used to check the status of a resource without transferring the entire resource. For example, a client might use HEAD to check the last-modified date of a webpage, or to see if the webpage has been updated since it was last retrieved. This can be more efficient than using GET, which would transfer the entire webpage, because it avoids the need to transfer the contents of the webpage.
+HEAD: The HEAD verb is often used to check the status of a resource without transferring the entire resource. For example,, if a URL might produce a large download, a HEAD request could read its Content-Length header to check the filesize without actually downloading the file.
 
 POST: This verb is used to submit an entity to the specified resource, often causing a change in state or side effects on the server. It is commonly used to submit forms, upload files, and perform other types of data updates on the server.
 
