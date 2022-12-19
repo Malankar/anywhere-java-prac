@@ -18,12 +18,7 @@ public class FutureDemo {
     Future<Integer> future = executor.submit(task);
 
     System.out.println("Doing other work...");
-    try {
-      Thread.sleep(500);
-    } catch (InterruptedException e1) {
-      e1.printStackTrace();
-    }
-
+    
     try {
       int result = future.get();
       System.out.println("Result: " + result);
