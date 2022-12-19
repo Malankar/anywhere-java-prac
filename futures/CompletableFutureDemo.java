@@ -1,5 +1,3 @@
-package futures;
-
 import java.util.concurrent.CompletableFuture;
 
 public class CompletableFutureDemo {
