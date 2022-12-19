@@ -1,6 +1,8 @@
 #### **`What is Website, Webpage, Web application?`**
 ```
-A website is a collection of related web pages that are hosted on a web server and are accessible through the internet using a web browser. A web page is a document that is displayed in a web browser and can contain text, images, videos, and other types of media.
+A website is a collection of related web pages that are hosted on a web server and are accessible through the internet using a web browser. 
+
+A web page is a document that is displayed in a web browser and can contain text, images, videos, and other types of media.
 
 A web application is a software application that is accessed over the internet using a web browser. Web applications are typically used to interact with users and perform tasks such as online shopping, banking, or social networking.
 
