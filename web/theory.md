@@ -102,6 +102,15 @@ TRACE: The TRACE verb is typically used for diagnostic purposes, to help identif
 ```
 Common Gateway Interface (CGI) is used to provide dynamic content to the user. It is used to execute a program or script that resides in the server to process data or access database to produce the relevant dynamic content. 
 ```
+
+#### **`Does cgi bind data to a webpage while process a request?`**
+```
+CGI (Common Gateway Interface) is a standard for running external programs from a web server, typically to generate dynamic content for a website. When a web server receives a request for a CGI program, it launches the program and passes it the request data as standard input. The CGI program then generates a response and sends it back to the web server, which in turn sends it back to the client as the final response.
+
+CGI programs are usually written in a programming language such as C, C++, or Perl, and they are responsible for generating the entire response for a request. This means that they can perform any processing or data manipulation that is needed to generate the response, including binding data to a web page.
+
+CGI can be used to bind data to a web page, but it requires the developer to write the code to do so, and it does not provide any built-in abstractions or utilities for this purpose. In contrast, frameworks such as Spring MVC or JSP provide built-in support for data binding and other web development tasks, which can simplify the process of binding data to a web page.
+```
 #### **`Disadvantages of CGI`**
 ```
 For each CGI server request a process is created. So if no. of request increases the no of process will also increase hence at some point there will be delay in responses.
