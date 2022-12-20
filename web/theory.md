@@ -225,3 +225,10 @@ In addition to simplifying the development of web applications, the Spring frame
 Overall, the Spring framework is a powerful and popular tool for building Java-based applications, and it is particularly useful for simplifying the development of web applications using servlets, JSP, and Java beans.
 
 ```
+
+#### **`How much data can we put in post request?`**
+```
+There is no inherent limit on the size of a POST request in HTTP, but many servers and clients have their own limits in place. For example, some servers may have a maximum limit on the size of a request body, or on the total size of all request headers. Some clients may also have limits on the amount of data they can send in a single request.
+
+In general, it is a good practice to keep the size of a POST request as small as possible, to minimize the amount of data that needs to be transferred and to reduce the risk of errors or timeouts. If you need to send a large amount of data, you may want to consider using other methods, such as sending the data in multiple smaller requests, or using a different protocol, such as FTP or SFTP, which are specifically designed for transferring large amounts of data.
+```
