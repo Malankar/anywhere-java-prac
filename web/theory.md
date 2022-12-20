@@ -136,3 +136,83 @@ Request handling: The servlet handles client requests by calling its service() m
 Destruction: When the web application is undeployed or stopped, the servlet's destroy() method is called, allowing the servlet to release any resources and perform any necessary cleanup.
 
 ```
+
+### **`What is servlet ?`**
+```
+A servlet is a Java class that runs in a Java-based web server, such as Apache Tomcat or Jetty. It is used to handle requests and generate responses for a web application.
+
+In the context of CGI (Common Gateway Interface), a servlet can be used as a replacement for traditional CGI programs. CGI programs are separate executables that are invoked by a web server to handle requests and generate responses. They are often written in languages such as C or Perl, and they run in their own process space, separate from the web server.
+
+Servlets, on the other hand, are written in Java and run within the Java Virtual Machine (JVM) of the web server. They are more efficient than CGI programs, as they do not need to start a new process for each request, and they can be easily shared among multiple requests.
+
+Servlets are commonly used in modern web development to implement the server-side logic of a web application. They can be used to handle requests, generate responses, access databases, and perform other tasks that are needed to support the application.
+```
+
+#### **`How do servlets work?`**
+```
+Servlets are Java classes that are used to handle requests and generate responses for a web application. They are designed to run within the Java Virtual Machine (JVM) of a web server, such as Apache Tomcat or Jetty.
+
+To create a servlet, you would first define a Java class that extends the javax.servlet.http.HttpServlet class and overrides one or more of its methods. The HttpServlet class provides a number of methods that correspond to different HTTP request methods (e.g., doGet(), doPost(), doPut(), etc.), and you can override these methods to provide the desired behavior for your servlet.
+
+Suppose you have defined a class MyServlet which extends httpservlet class and overriden do get method from it. 
+So When a GET request is received by the servlet, this method will be called to handle the request and generate the response.
+
+To deploy the servlet, you would typically create a deployment descriptor (a file named web.xml) that defines the servlet and maps it to a specific URL pattern. The servlet container (the part of the web server that manages servlets) would then load the servlet and register it with the web server.
+
+When a request is received by the web server that matches the URL pattern of the servlet, the servlet container will create an instance of the servlet and call the appropriate method (e.g., doGet(), doPost(), etc.) to handle the request and generate the response. The servlet can then use the HttpServletRequest and HttpServletResponse objects that are passed to it to access the request data and generate the appropriate response.
+
+For example, the servlet might use the HttpServletResponse object to set the HTTP status code, headers, and body of the response, and it might use the HttpServletRequest object to access the parameters, headers, and other data that was sent with the request.
+
+Once the servlet has finished handling the request, it can use the HttpServletResponse object to send the response back to the client. The servlet container will then destroy the servlet instance and return the response to the client.
+```
+
+#### **`Does the data binding takes place in servlet and how and at which stage`**
+```
+Data binding is the process of converting data from one format to another, typically for the purpose of storing or exchanging data. In the context of a servlet, data binding might involve converting request data (such as form data or JSON payloads) into Java objects, or converting Java objects into a format that can be sent as a response (such as JSON or XML).
+
+```
+
+#### **`What is jsp ? `**
+```
+JSP (JavaServer Pages) is a Java-based technology for creating dynamic web pages. It is used to create web content that is generated on the server side, based on user input or other data.
+
+```
+#### **`Why there was a need for jsp ? `**
+```
+JSP was developed as an alternative to traditional CGI (Common Gateway Interface) programs, which are separate executables that are invoked by a web server to handle requests and generate responses. JSP allows developers to create dynamic web pages using a simple, HTML-like syntax, and it is executed by a JSP container (usually part of a web server) that translates the JSP code into Java servlets.
+
+```
+#### **`How its used with servlets ?`**
+```
+JSP is often used in conjunction with servlets, which are Java classes that are used to handle requests and generate responses for a web application. Servlets are more efficient than CGI programs, as they do not need to start a new process for each request, and they can be easily shared among multiple requests. JSP pages can be used to generate the content of a response, and servlets can be used to handle the logic and processing of the request.
+```
+#### **`What are beans in java ?`**
+```
+Beans in Java are simple Java classes that are used to store and manage data in an application. They are often used in conjunction with JSP pages to store and manipulate data that is displayed in the user interface of a web application. Beans are typically used to represent business data or other types of data that need to be accessed and manipulated in the application.
+
+Java beans can be used to store and manipulate data that is displayed in the user interface of a web application. For example, a bean might represent a customer record, an order, or other business data that needs to be accessed and manipulated in the application. The bean might define properties (such as the customer's name, address, and phone number) and methods (such as a method to calculate the total cost of an order) that can be used to access and manipulate the data.
+```
+
+#### **`Why use Sping boot ?`**
+```
+The Spring framework is a Java-based application development framework that provides a number of features and tools for building enterprise applications. One of the key features of Spring is its ability to simplify the development of web applications by providing a number of abstractions and utilities for common web development tasks.
+
+In the context of servlets, JSP, and Java beans, the Spring framework provides a number of features that can simplify the development process:
+
+Dependency injection: Spring provides a dependency injection (DI) mechanism that allows you to declaratively specify the dependencies of your beans, rather than hard-coding them in your code. This can make your code more flexible and easier to test, as you can easily swap out different implementations of a dependency without changing your code.
+
+MVC framework: Spring provides a Model-View-Controller (MVC) framework that can be used to build web applications. The MVC framework separates the presentation layer of the application (the view) from the business logic (the controller) and the data model (the model). This can make it easier to develop and maintain web applications, as the different layers of the application are more loosely coupled.
+
+Data binding: Spring provides a data binding mechanism that can be used to convert request data (such as form data or JSON payloads) into Java objects, and to convert Java objects into a format that can be sent as a response (such as JSON or XML). This can simplify the process of handling request data and generating responses in a servlet or JSP.
+
+Persistence support: Spring provides support for working with databases and other persistence technologies, such as JDBC, Hibernate, and JPA. This can simplify the process of accessing and manipulating data in a web application, as you can use Spring's persistence APIs rather than working directly with the persistence technology.
+
+In general, the Spring framework provides a number of features and tools that can simplify the development of web applications using servlets, JSP, and Java beans. It provides abstractions and utilities that can help to reduce the complexity of common web development tasks, such as dependency injection, data binding, and persistence support.
+
+By using the Spring framework, developers can focus on building the business logic and features of their application, rather than worrying about the low-level details of working with servlets, JSP, and Java beans. This can result in more efficient and effective development, and it can make it easier to maintain and evolve the application over time.
+
+In addition to simplifying the development of web applications, the Spring framework also provides a number of other features and tools that can be used to build enterprise applications, such as support for security, transactions, and messaging. These features can further simplify the development process and help to build more robust and scalable applications.
+
+Overall, the Spring framework is a powerful and popular tool for building Java-based applications, and it is particularly useful for simplifying the development of web applications using servlets, JSP, and Java beans.
+
+```
