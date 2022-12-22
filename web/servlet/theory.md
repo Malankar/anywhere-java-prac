@@ -23,33 +23,30 @@
 >
 > **`Class loading:`** The servlet class is loaded into the Java Virtual Machine (JVM) when the web application is deployed or started.
 >
-> **`Instantiation:`** The servlet class is instantiated, creating a new instance of the servlet.
+> **`Instantiation:`** The servlet class is instantiated, creating a new instance of the servlet. A servlet is instantiated by the web container when the web application is deployed or when the first request is made to the servlet. The servlet's init() method is called to initialize the servlet and perform any required setup tasks.
 >
 > **`Initialization:`** The servlet's init() method is called, allowing the servlet to initialize itself and perform any necessary setup. The init() method is called when the servlet is first created.
 >
-> **`Request handling:`** The servlet handles client requests by calling its service() method and generating a response.
+> **`Request handling:`** The servlet handles client requests by calling its service() method and generating a response. The service() method is responsible for routing requests to the appropriate handler method based on the request method (e.g., GET, POST, etc.). It is not intended to be overridden by developers, as it is automatically implemented by the Servlet interface.
 >
 > **`Destruction:`** When the web application is undeployed or stopped, the servlet's destroy() method is called, allowing the servlet to release any resources and perform any necessary cleanup.
 
 #### What is difference between query parameter and path variable in java ?
 
-> A query parameter is a piece of information that is included in the
-> query string of a URL. It is used to pass data from a client to a
-> server
+> A query parameter is a piece of data that is appended to the end of a URL and sent to a server when a client (such as a web browser) makes a request. Query parameters are used to pass additional information to the server and are typically used in situations where the server needs to perform some action or return specific data based on the parameters provided.
 >
-> A query parameter has the form "name=value" and is separated from the
-> rest of the query string by a "&" character. Multiple query parameters
-> can be included in a single query string, separated by "&" characters.
+> Query parameters are separated from the base URL by a question mark (?) and are usually formatted as key-value pairs. For example, in the URL "www.example.com/search?keyword=laptops", the query parameter is "keyword=laptops". The "key" in this case is "keyword", and the "value" is "laptops".
 >
-> On the other hand, a path variable is a piece of information that is
-> included in the path of a URL. It is used to specify a resource or
-> action that is specific to a particular URL path.
+> Query parameters are separated from the base URL by a question mark (?) and are usually formatted as key-value pairs. For example, in the URL "www.example.com/search?keyword=laptops", the query parameter is "keyword=laptops". The "key" in this case is "keyword", and the "value" is "laptops".
 >
-> A path variable is typically represented as a placeholder in the URL
-> path, surrounded by curly braces ({}). The value of the path variable
-> is extracted from the URL and passed to the server as a request
-> parameter.
-> In summary, a query parameter is a piece of information that is included in the query string of a URL and is used to pass data from a client to a server, while a path variable is a piece of information that is included in the path of a URL and is used to specify a resource or action that is specific to a particular URL path.
+> For example, consider the URL "www.example.com/users/123". In this case, "123" is a path variable that specifies the ID of a specific user. The server can use this ID to look up and return information about the user with the specified ID.
+
+#### Query parameter can used in the users example right like to find the user we can just append www.example.com/users?userId=123 right why use path variable ?
+> Yes, it is possible to use query parameters to pass information about a specific user to the server in the example you provided. For example, you could use a URL like "www.example.com/users?userId=123" to request information about a user with an ID of 123.
+> However, using a path variable has some advantages over using a query parameter in this case. One advantage is that the URL with a path variable is more descriptive and easier to read. Instead of seeing a generic "www.example.com/users" URL followed by a query parameter, you can see exactly which user is being requested by looking at the URL. This can be helpful for debugging purposes and for understanding the structure of your application.
+> Another advantage is that using a path variable can make it easier to build links within your application. For example, if you have a list of users on your website and you want to link to a specific user's profile page, it's much easier to use a path variable in the URL than to try to build a query string with all of the necessary information.
+> Finally, using a path variable can also make it easier to implement caching or other optimization techniques on the server, since the server can treat each URL with a unique path variable as a unique resource that can be cached separately from other URLs. This can improve the performance of your application.
+
 
 #### What is Generic Servlet
 > The GenericServlet is a class in the Java Servlet API that provides a generic, protocol-independent implementation of the Servlet interface. It can be used to implement servlets for any protocol, such as HTTP, HTTPS, FTP, or SMTP.
@@ -68,11 +65,11 @@
 
 #### What are disadvantages of servlet ?
 
-> **`Single threaded model`**: Servlets are designed to run in a single threaded model, which means that each servlet instance can only handle one request at a time. This can be a disadvantage if your application needs to handle high traffic or large amounts of data, as it can lead to poor performance and slow response times.
+> **`Single threaded model`**: The Single threaded model of servlets means that each servlet instance can only handle one request at a time. This can be a disadvantage if your application needs to handle a high volume of requests simultaneously, as it can lead to slow response times and poor performance. 
 >
-> **`Lack of asynchronous support:`** Servlets do not provide built-in support for asynchronous processing, which means that they are not well-suited for tasks that require long-running operations or that need to handle multiple requests concurrently. This can be a disadvantage if your application needs to perform tasks such as database queries or network I/O that take a long time to complete.
+> **`Lack of asynchronous support:`** The lack of asynchronous support in servlets means that they are not well-suited for tasks that require long-running operations or that need to handle multiple requests concurrently. This can be a disadvantage if your application needs to perform tasks such as database queries or network I/O that take a long time to complete.
 >
-> **`Lack of non-blocking I/O support:`** Servlets do not provide built-in support for non-blocking I/O, which means that they can block the thread that is handling a request while waiting for a response from an external resource such as a database or a network socket. This can lead to poor performance and slow response times, especially when handling high traffic or large amounts of data.
+> **`Lack of non-blocking I/O support:`** Servlets do not provide built-in support for non-blocking I/O, which means that they can block the thread that is handling a request while waiting for a response from an external resource such as a database. This can lead to poor performance and slow response times, especially when handling high traffic or large amounts of data.
 >
 > **`Lack of support for modern web development practices:`** Servlets do not provide built-in support for modern web development practices such as dependency injection, annotations, or MVC (Model-View-Controller) frameworks. This can make it more difficult to develop modern web applications using servlets and can lead to code that is less maintainable and scalable.
 >
@@ -82,7 +79,7 @@
 > ServletConfig is an object containing some initial parameters or configuration information created by Servlet Container and passed to the servlet during initialization. ServletConfig is for a particular servlet, which means one should store servlet-specific information in web. xml and retrieve them using this object.
 
 #### What is servlet context ?
-> Defines a set of methods that a servlet uses to communicate with its servlet container, for example, to get the MIME type of a file, dispatch requests, or write to a log file. There is one context per "web application" per Java Virtual Machine.
+> Defines a set of methods that a servlet uses to communicate with its servlet container, for example, to get the type of a file, dispatch requests, or write to a log file. There is one context per "web application" per Java Virtual Machine.
 > An object of ServletContext is created by the web container at time of deploying the project. This object can be used to get configuration information from web.xml file.
 > Advantage of ServletContext
 >
@@ -95,3 +92,6 @@
 > The ServletContext object can be used to set, get or remove attribute from the web.xml file.
 > The ServletContext object can be used to provide inter-application communication.
 
+#### Can a destory method be called after every request and if it is done is it efficient or not efficient ?
+> The destroy() method of a servlet is called by the web container when the web application is undeployed or stopped, allowing the servlet to release any resources and perform any necessary cleanup. It is not intended to be called after every request.
+> Calling the destroy() method after every request would not be efficient, as it would require the web container to instantiate a new instance of the servlet for each request, which would use up resources and degrade performance. It would also prevent the servlet from being able to maintain state between requests, as the servlet instance would be destroyed after each request.

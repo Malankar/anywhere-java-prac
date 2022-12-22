@@ -46,5 +46,12 @@
 >
 > Stateless protocols do not maintain state in the sense of keeping track of the data that is being transmitted or remembering information about the connection after it has been closed. Each request is treated as an independent unit, and the connection is closed once the data transmission is complete. This allows stateless protocols to be more efficient and scaleable, as they do not need to maintain a connection or keep track of state for each request.
 
+#### How does udp send data?
+> When a device wants to send a packet of data using UDP, it adds a UDP header to the packet and then passes it to the IP layer for routing. The UDP header includes the source and destination port numbers, as well as a checksum to help detect errors. The IP layer adds an IP header to the packet, which includes the source and destination IP addresses and other control information.
 
+#### What is checksum how its used in udp?
+> The checksum is included in the UDP header, which is added to the packet of data before it is transmitted over the network. The checksum is calculated based on the contents of the UDP header and the payload (the actual data being transmitted).
+> The purpose of the checksum is to help detect errors in the transmission of the data. When the packet is received by the destination device, it calculates the checksum again based on the received data and compares it to the checksum in the UDP header. If the calculated checksum does not match the checksum in the header, it means that an error has occurred in the transmission of the data and the packet is discarded.
+> The use of a checksum helps to ensure the integrity of the transmitted data and helps to prevent corruption or errors in the transmission process. However, it is important to note that the checksum is not a foolproof mechanism, as it is possible for errors to go undetected if the checksum calculation is faulty or if the error occurs in the checksum itself.
+> In summary, the checksum in UDP is a value that is calculated based on the contents of the UDP header and the payload and is used to help detect errors in the transmission of the data. It is included in the UDP header and is used by the destination device to verify the integrity of the received data.
 
